@@ -1,32 +1,31 @@
 // written by: atholcomb
 // main.go
-// Traditional fizzbuzz program
+// FizzBuzz Interview question
+// Write a function (fizzBuzz), that
+// returns FizzBuzz, Fizz, or Buzz
+// if a number is divisible by 3 or 5
 
 package main
 
-import (
+import ( 
     "fmt"
-    "strconv"
 )
 
 func main() {
-  fmt.Println(fizzbuzz(3))
-  fmt.Println(fizzbuzz(5))
-  fmt.Println(fizzbuzz(15))
-  fmt.Println(fizzbuzz(4))
+  fmt.Println(fizzBuzz(3))
+  fmt.Println(fizzBuzz(5))
+  fmt.Println(fizzBuzz(15))
+  fmt.Println(fizzBuzz(16))
 }
 
-func fizzbuzz(n int) (int string) {
-  var value string
-
-  if n % 3 == 0 && n % 5 == 0 {
-    value = " FizzBuzz"
-  } else if n % 3 == 0 {
-    value = " Fizz" 
-  } else if n % 5 == 0 {
-    value = " Buzz"
+func fizzBuzz(num int) (string, int){
+  if num % 3 == 0 && num % 5 == 0 {
+    return "FizzBuzz:", num
+  } else if num % 3 == 0 {
+    return "Fizz:", num
+  } else if num % 5 == 0 {
+    return "Buzz:", num
   } else {
-    value = " not divisible by 3 or 5"
+    return "3 or 5 are not divisible into:", num
   }
-  return strconv.Itoa(n) + value
 }
