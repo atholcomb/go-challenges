@@ -1,6 +1,7 @@
 // written by: atholcomb
 // main.go
-// Test program to try things out
+// returns the sum of all odds and evens
+// both positive and negative
 
 package main
 
