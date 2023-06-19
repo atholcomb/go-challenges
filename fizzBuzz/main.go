@@ -1,31 +1,33 @@
 // written by: atholcomb
 // main.go
-// FizzBuzz Interview question
 // Write a function (fizzBuzz), that
 // returns FizzBuzz, Fizz, or Buzz
-// if a number is divisible by 3 or 5
+// if a number is divisible by 3, 5 or 15
 
 package main
 
-import ( 
-    "fmt"
+import (
+  "fmt"
 )
 
 func main() {
-  fmt.Println(fizzBuzz(3))
-  fmt.Println(fizzBuzz(5))
-  fmt.Println(fizzBuzz(15))
-  fmt.Println(fizzBuzz(16))
+  fmt.Println(fizzBuzz())
 }
 
-func fizzBuzz(num int) (string, int){
-  if num % 3 == 0 && num % 5 == 0 {
-    return "FizzBuzz:", num
-  } else if num % 3 == 0 {
-    return "Fizz:", num
-  } else if num % 5 == 0 {
-    return "Buzz:", num
+func fizzBuzz() (int, string) {
+  var num int
+  n, m, o := 3, 5, 15
+
+  fmt.Printf("Please enter a number: ")
+  fmt.Scanf("%v", &num)
+
+  if num % o == 0 {
+    return num, "Fizzbuzz"
+  } else if num % n == 0 {
+    return num, "Fizz"
+  } else if num % m == 0 {
+    return num, "Buzz"
   } else {
-    return "3 or 5 are not divisible into:", num
+    return num, "is not divisble by 3, 5, or 15"
   }
 }
