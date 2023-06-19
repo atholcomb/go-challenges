@@ -1,6 +1,6 @@
 // written by: atholcomb
 // main.go
-// Mock camera configuration 
+// Mock camera configuration --
 // Sets frame rate value for each camera
 
 package main
