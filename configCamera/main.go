@@ -23,7 +23,7 @@ func configCamera() map[string]int {
   }
   
   for k, _ := range camera_defaults {
-    fmt.Printf("Enter camera %s frame rate: ", k)
+    fmt.Printf("Enter %s frame rate: ", k)
     fmt.Scanf("%d", &camera_frames)   
     frame_rates = append(frame_rates, camera_frames)
   }
