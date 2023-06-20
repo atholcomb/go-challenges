@@ -34,7 +34,7 @@ func karacaAlgo(str string) string {
   
   /* reverse the original given string */
   for i := (len(str)-1); i >= 0; i-- {
-    encryptedStr = encryptedStr + string(str[i])
+    encryptedStr += string(str[i])
   }
   
   /* loop over key + encrypted string and replace vowels with key index value */
